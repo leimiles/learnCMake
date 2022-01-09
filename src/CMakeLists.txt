@@ -1,0 +1,1 @@
+add_library(fun fun.cpp) #使用 fun.cpp 这个文件生成一个名为 fun 的库
