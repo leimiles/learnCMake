@@ -1,7 +1,8 @@
 #include <iostream>
+#include <windows.h>
 #include "include/users/fun.h"
 #include "thirdParty/glfw/include/GLFW/glfw3.h"
-#include <windows.h>
+#include "CTConfig.h"
 
 // this function hide the console window
 void Stealth()
@@ -12,9 +13,11 @@ void Stealth()
     ShowWindow(Stealth, 0);
 }
 
-int main(void)
+int main(int argc, char* argv[])
 {
-    Stealth();
+    //Stealth();
+    std::cout << argv[0] << " Version " << CT_VERSION_MAJOR << "." << CT_VERSION_MINOR << std::endl;
+
     GLFWwindow* window;
 
     /* Initialize the library */

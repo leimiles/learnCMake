@@ -1,7 +1,14 @@
 cmake_minimum_required(VERSION 3.10.0)      #最小版本
-project(CT)     #项目名称
+project(CT VERSION 0.1)     #项目名称 项目版本
+
+configure_file(CTConfig.h.in CTConfig.h)        # 配置程序版本文件
+
 add_executable(${PROJECT_NAME} main.cpp) #本CMakeLists 负责生成一个可执行文件名称与项目名称相同，其源文件是 main.cpp
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})        #执行程序需要包含二进制文件目录
+
 add_subdirectory(src)       #构建时包含指定的名为 src 文件夹 
+
 
 # DOWNLOAD ALL THE SUBMODULES
 find_package(Git QUIET)
