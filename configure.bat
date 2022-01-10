@@ -1,0 +1,3 @@
+
+
+cmake -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF -DGLFW_BUILD_EXAMPLES=OFF -G "MinGW Makefiles" -S ./ -B ./build
