@@ -18,7 +18,7 @@ target_include_directories(${PROJECT_NAME}
 
 add_subdirectory(src)       #构建时包含指定的名为 src 文件夹 
 
-set(YUKI "XUHUAIYU")
+set(YUKI "XuHuaiYu" CACHE STRING "Output directory")    #YUKI 这个变量在第一次 build 之后将全局可见
 
 # DOWNLOAD ALL THE SUBMODULES
 find_package(Git QUIET)
