@@ -1,8 +1,10 @@
 #include <iostream>
 #include <windows.h>
-#include "include/users/fun.h"
-#include "thirdParty/glfw/include/GLFW/glfw3.h"
+#include "GLFW/glfw3.h"
 #include "CTConfig.h"
+#ifdef _MODERN_CMAKE
+#include "users/fun.h"
+#endif
 
 // this function hide the console window
 void Stealth()
@@ -15,6 +17,9 @@ void Stealth()
 
 int main(int argc, char* argv[])
 {
+#ifdef _MODERN_CMAKE
+    fun01();
+#endif
     //Stealth();
     std::cout << argv[0] << " Version " << CT_VERSION_MAJOR << "." << CT_VERSION_MINOR << std::endl;
 
